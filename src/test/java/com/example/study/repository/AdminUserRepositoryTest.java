@@ -23,12 +23,14 @@ class AdminUserRepositoryTest extends StudyApplicationTests {
         adminUser.setPassword("AdminUser01");
         adminUser.setStatus("REGISTERED");
         adminUser.setRole("PARTNER");
-        adminUser.setCreatedAt(LocalDateTime.now());
-        adminUser.setCreatedBy("AdminServer");
+       // adminUser.setCreatedAt(LocalDateTime.now());
+       // adminUser.setCreatedBy("AdminServer");
 
         AdminUser newAdminUser = adminUserRepository.save(adminUser);
         Assertions.assertNotNull(newAdminUser);
 
+        newAdminUser.setAccount("CHANGE");
+        adminUserRepository.save(newAdminUser);
     }
 
 }
