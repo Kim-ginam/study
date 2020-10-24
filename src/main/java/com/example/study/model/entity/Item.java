@@ -1,5 +1,6 @@
 package com.example.study.model.entity;
 
+import com.example.study.model.enumclass.Itemstatus;
 import lombok.*;
 import lombok.experimental.Accessors;
 import org.aspectj.weaver.ast.Or;
@@ -28,7 +29,8 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private Itemstatus status;
 
     private String name;
 
