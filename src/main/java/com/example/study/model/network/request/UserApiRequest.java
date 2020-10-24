@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UserAPiRequest {
+public class UserApiRequest {
 
     private Long id;
 

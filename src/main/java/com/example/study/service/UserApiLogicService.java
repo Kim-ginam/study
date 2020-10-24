@@ -3,7 +3,7 @@ package com.example.study.service;
 import com.example.study.ifs.CrudInterface;
 import com.example.study.model.entity.User;
 import com.example.study.model.network.Header;
-import com.example.study.model.network.request.UserAPiRequest;
+import com.example.study.model.network.request.UserApiRequest;
 import com.example.study.model.network.response.UserApiResponse;
 import com.example.study.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
-public class UserApiLogicService implements CrudInterface<UserAPiRequest, UserApiResponse> {
+public class UserApiLogicService implements CrudInterface<UserApiRequest, UserApiResponse> {
 
     @Autowired
     private UserRepository userRepository;
@@ -22,11 +22,11 @@ public class UserApiLogicService implements CrudInterface<UserAPiRequest, UserAp
     // 2. user 생성
     // 3. 생성된 데이터 -> UserApiResponse return
     @Override
-    public Header<UserApiResponse> create(Header<UserAPiRequest> request) {
+    public Header<UserApiResponse> create(Header<UserApiRequest> request) {
 
         // 1. request data
 
-        UserAPiRequest userAPiRequest = request.getData();
+        UserApiRequest userAPiRequest = request.getData();
 
         // 2. user 생성
 
@@ -62,11 +62,11 @@ public class UserApiLogicService implements CrudInterface<UserAPiRequest, UserAp
     }
 
     @Override
-    public Header<UserApiResponse> update(Header<UserAPiRequest> request) {
+    public Header<UserApiResponse> update(Header<UserApiRequest> request) {
 
         // 1. data
 
-        UserAPiRequest userAPiRequest = request.getData();
+        UserApiRequest userAPiRequest = request.getData();
 
         // 2. id -> user 데이터를 찾고
 
